@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    let bandInfo;
+    let bands = {}
+bands ={
+name: 'Dera',
+country: 'USA',
+genre: 'jazz',
+number: 09029935318,
+formed: 1990,
+split: 2018,
+albums: [{name: 'pop', released: 2016},{name: 'popp', released: 2018}]
+}
+bandInfo= `the name of our band is ${bands.name} and we are from ${bands.country}, we play ${bands.genre} reach us on ${bands.number} and we were formed in ${bands.formed}. and we got splited in ${bands.split}.first album titled ${bands.albums[0].name},was released in ${bands.albums[0].released}`
+
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = bandInfo;
+    section.appendChild(para1);
+  </script>
+
+</html>
